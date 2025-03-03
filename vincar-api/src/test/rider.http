@@ -1,0 +1,38 @@
+//Rider
+
+POST http://localhost:3000/rides
+Content-Type: application/json
+
+{
+    "passenger_user_id": "06af8f2a-3ae3-47a2-a3a4-bc0824a4ba0a",
+    "driver_user_id": "4b692b9e-2b2c-42fd-a03a-c4fab42a6b9b",
+    "pickup_address": "Rua Castro Alves",
+    "pickup_latitude": "-23.54",
+    "pickup_longitude": "-46.50",
+    "dropoff_address": "Rua Jardim Palmares"
+}
+
+###
+GET http://localhost:3000/rides
+
+
+###
+DELETE  http://localhost:3000/rides/6bd4109a-ad2d-463e-9353-15af9e60bb03
+
+
+###
+put http://localhost:3000/rides/e48094cd-6437-4881-a26f-d8b71e79e02b/finish
+
+
+###
+put http://localhost:3000/rides/e48094cd-6437-4881-a26f-d8b71e79e02b/accept
+
+
+###
+put http://localhost:3000/rides/e48094cd-6437-4881-a26f-d8b71e79e02b/cancel
+
+
+###
+GET http://localhost:3000/rides/e48094cd-6437-4881-a26f-d8b71e79e02b
+
+
