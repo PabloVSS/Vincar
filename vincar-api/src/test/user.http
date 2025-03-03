@@ -1,0 +1,28 @@
+
+//Usuarios
+###
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+      "name": "sal",
+      "phone": "12345666666",
+      "email": "da@gmail.com",
+      "password": "123456"
+}
+
+###
+PATCH http://localhost:3000/user/06af8f2a-3ae3-47a2-a3a4-bc0824a4ba0a
+Content-Type: application/json
+
+{
+      
+      "phone": "6293296503"
+   
+}
+
+###
+GET http://localhost:3000/user/
+
+###
+DELETE http://localhost:3000/user/06af8f2a-3ae3-47a2-a3a4-bc0824a4ba0a
