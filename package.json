@@ -1,0 +1,14 @@
+{
+  "name": "vincar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+"scripts": {
+  "start:vincar-api": "cd vincar-api && npm run dev",
+  "start:vincar-mobile": "cd vincar-mobile && expo start",
+  "start:all": "concurrently \"npm run start:vincar-api\" \"npm run start:vincar-mobile\""
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String   @id @default(uuid())
+  name            String
+  phone           String
+  email           String   @unique
+  password        String
+  resetToken       String?   @unique
+  resetTokenExpiry DateTime?
+  passengerRides  Ride[]   @relation("PassengerRides")
+  driverRides     Ride[]   @relation("DriverRides")
+}
+
+enum RideStatus {
+    P @map("P")
+    A @map("A")
+    F @map("F")
+    C @map("C") 
+}
+
+model Ride {
+    id                String     @id @default(uuid())
+    passenger_user_id String
+    pickup_address    String
+    driver_user_id    String?
+    pickup_date       DateTime
+    pickup_latitude   Float
+    pickup_longitude  Float
+    dropoff_address   String
+    status            RideStatus @default(P)
+    passenger         User       @relation("PassengerRides", fields: [passenger_user_id], references: [id])
+    driver            User?      @relation("DriverRides", fields: [driver_user_id], references: [id])
+}
