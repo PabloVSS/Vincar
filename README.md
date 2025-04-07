@@ -1,7 +1,5 @@
 # Vincar
  
-# Nome do Projeto: [Nome do seu Aplicativo de Caronas]
-
 ## Descrição
 
 Vincar é um aplicativo desenvolvido como um projeto de portfolio, com o objetivo de conectar pessoas que estão indo no mesmo trajetos e querem reduzir custos. O projeto tem duas partes Principais:
